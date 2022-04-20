@@ -8,6 +8,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.databinding.ViewDataBinding
 import androidx.lifecycle.ViewModel
+import com.app.practicaltatvsoft.ktx.showSnackbar
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import javax.inject.Inject
@@ -45,9 +46,9 @@ abstract class BaseActivity<T : ViewDataBinding, V : ViewModel> : AppCompatActiv
         setUpObserver()
     }
 
-/*    fun showSnackbar(msg: String) {
+    fun showSnackbar(msg: String) {
         binding.root.showSnackbar(msg)
-    }*/
+    }
 
     fun delay(delay: Long, function: () -> Unit) {
         Handler(Looper.getMainLooper()).postDelayed(function, delay)
